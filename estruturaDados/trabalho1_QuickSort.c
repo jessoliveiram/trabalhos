@@ -17,3 +17,4 @@ insere (int *& L, int & nelem, int & tam){
 		nelem ++;
 	}
 	
+	
