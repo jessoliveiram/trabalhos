@@ -1,0 +1,23 @@
+#menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:gray;
+    list-style:none;
+}
+body {
+    background-color: #EDEDED;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+	font-family: verdana;
+}
+
+p {
+    font-family: calibri;
+    font-size: 20px;
+}
+h2,h3 {
+    font-family: verdana;
+}
