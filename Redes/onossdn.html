@@ -3,24 +3,25 @@
 <html>
 	<head>
 		<title>ONOS</title>
+		<link rel="stylesheet" type="text/css" href="css_onos.css">
 	</head>
 
 	<body>
 		<h1>ONOS - Open Network Operating System</h1>
 
-		<div>
+		<nav id="menu">
 			<ul>
-				<li>Introdução</li>
-				<li>Onos e SDN</li>
-				<li>Aplicações</li>
-				<li>Conclusões</li>
+				<li><a href="index.html">Introdução</a></li>
+				<li><a href="onossdn.html">Onos e SDN</a></li>
+				<li><a href="arquitetura.html">Arquitetura</a></li>
+				<li><a href="beneficios.html">Benefícios</a></li>
+				<li><a href="casosdeuso.html">Casos de Uso</a></li>
+				<li><a href="bibliografia.html">Bibliografia</a></li>
+				<li><a href="perguntas.html">Perguntas</a></li>
 			</ul>
-		</div>
+		</nav>
 
-		<div>
-			<h2>Introdução </h2>
-				<p>Open Network Operating System, ou simplesmente ONOS, é um projeto open source de rede definida por software (SDN, do inglês software-defined networking). Faz parte da Linux Foundation e tem como objetivo melhorar a disponibilidade, desempenho e escalabilidade. Neste trabalho, será explicado o que é SDN, ONOS e a relação entre eles. Além disso, será descrito casos de uso com ONOS, e sua contribuição de forma prática para diversos desenvolvimentos. </p>
-
+		<div id=corpo>
 			<h3>O que é SDN e Openflow</h3>
 				<p>SDN permite a programação de elementos de rede, tais como roteadores, comutadores, etc. Se fundamenta na separação dos planos de Controle e de Dados, tornando a rede programável e flexível. Ela é formada por três camadas principais: camada de aplicação, camada de controle e camada de infraestrutura. </p>
 				<p>A camada de aplicação utiliza uma API para especificar o comportamento da rede. A camada de controle é responsável por traduzir requisitos da camada de aplicação para a camada de infraestrutura, e oferece uma visão abstrata da rede às aplicações. A camada de infraestrutura é composta pelos elementos da rede, e dispositivos que realizam a transmissão de dados. </p>
@@ -29,18 +30,8 @@
 			<h3>O que é ONOS</h3>
 				<p>O nome ONOS significa Open Network Operating System. É um controlador SDN, composto de código aberto, que permite usabilidade em larga escala, com alto desempenho. Este sistema proporciona abstrações de alto nível, podendo aprender sobre a rede e controlar o fluxo sobre ela. Assim, é possível descrever como se quer utilizar a rede, e não como isso deve ser feito, resolvendo situações que seriam de conflito para o desenvolvimento de uma aplicação. O ONOS atua sobre uma rede definida por SDN (software-defined network), gerenciando seus componentes. Seus casos de uso geralmente envolvem serviços personalizados de roteamento, gerenciamento ou monitoramento de comunicação para redes definidas por software, possibilitando customização do roteamento. </p>
 				<p>O kernel ONOS e os serviços principais, assim como os aplicativos ONOS, são descritos em Java como pacotes configuráveis, que são carregados em contêiner OSGi. O sistema pode suportar falhas de nós individuais sem causar interrupções em sua capacidade de operação.</p>
-
-			<h2>Arquitetura </h2>
-				<p>Foi desenvolvido pela equipe On.Lab, uma organização sem fins lucrativos especializada em tecnologias SDN e OpenFlow. Hoje, faz parte da Linux Foundation como projeto colaborativo. O sistema é dividido entre as seguintes camadas:</p>
-				<ul>
-					<li>Apps</li>
-					<li>Northbound</li>
-					<li>Distributed Core</li>
-					<li>Southbound</li>
-					<li>Openflow</li>
-				</ul>
- 
-				<p>Cada serviço é composto de vários subsistemas. Um serviço é formado por uma fatia vertical, composta por cada camada da arquitetura, agrupada de acordo com o serviço desejado.  Um subsistema é uma coleção de componentes que, juntos, compõem um determinado serviço. </p>
+				
+				
 
 		</div>
 

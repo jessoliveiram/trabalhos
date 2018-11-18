@@ -8,3 +8,5 @@ typedef struct {
 data *d;
 d = malloc (sizeof (data));
 d->dia = 31; d->mes = 12; d->ano = 2016;
+
+printf("%s\n", "Hoje é sabado." );

@@ -1,9 +1,27 @@
 #menu ul {
-    padding:0px;
+	list-style-type: none;
+    padding: 0;
     margin:0px;
-    background-color:gray;
-    list-style:none;
+    font-family: verdana;
+	color: black;
 }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+	
 body {
     background-color: #EDEDED;
 }
@@ -17,7 +35,54 @@ h1 {
 p {
     font-family: calibri;
     font-size: 20px;
+	text-align: justify;
+	text-indent: 60px;
 }
+
+#autoria, #bibliografia {
+	font-family: calibri;
+    font-size: 15px;
+	font-style: italic;
+	text-align: justify;
+	text-indent: 60px;
+	margin-right: 100px;
+	 margin-left: 100px;
+}
+
 h2,h3 {
     font-family: verdana;
+}
+
+#list {
+	font-family: calibri;
+	font-size: 20px;
+	text-align: left;
+}
+
+#corpo {
+	 margin-top: 100px;
+	 margin-right: 40px;
+	 margin-left: 40px;
+}
+div.figure {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 800px;
+	text-align: center;
+	font-style: italic;
+	font-size: smaller;
+	text-indent: 0;
+}
+#italic {
+	font-style: italic;
+}
+#pergunta {
+	font-family: calibri;
+    font-size: 20px;
+	font-weight: bold;
+	text-align: justify;
+	text-indent: 60px;
+	margin-right: 40px;
+	margin-left: 40px;
 }
