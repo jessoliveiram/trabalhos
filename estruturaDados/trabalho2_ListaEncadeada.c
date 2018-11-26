@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <bits/stdc++.h> 
 
 using namespace std;
 
@@ -48,6 +49,19 @@ void insereNoFinal(tno** listaRef, string x)
   novoNo->ant = ultNo; 
 }
 
+void separafrase(string frase)
+{
+  string palavra;
+  short contador = 0;
+  for (short i = 0; i<frase.length(); i++){
+    if (frase[i] == ' ')
+        contador++;
+    else
+        palavra[contador] += frase[i];
+        insereNoFinal(&lista, palavra); 
+  }
+}
+
 int main()
 {
   tno * lista = NULL;
@@ -56,5 +70,7 @@ int main()
   insereNoFinal(&lista, "guerigueri");
   insereNoFinal(&lista, "guerigueri");
   
-  cout << contaPalavra(lista, "234234234");
+  separaFrase("O rato roeu a roupa do rei de Roma");
+  cout << contaPalavra(lista, "roupa");
+
 }
