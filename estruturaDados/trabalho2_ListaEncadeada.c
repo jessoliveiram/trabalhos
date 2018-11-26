@@ -1,21 +1,60 @@
-typedef struct_tno {
-	init chave;
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+typedef struct struct_tno {
+	string chave;
 	struct_tno * ant;
 	struct_tno * prox;
 } tno;
 
-init (tno * & ptlista) {
-	ptlista = NULL;
-}
-
-busca (ptlista, x) {
-	pt = ptlista;
-	while (pt != NULL && pt>chave < x) {
-		pt = pt>prox;
+int contaPalavra(tno* & ptlista, string x) {
+	int count = 0;
+	tno* pt = ptlista;
+	while (pt != NULL) {
+	    if(pt->chave == x)
+	    {
+	        count++;
+	    }
+	    
+		pt = pt->prox;
 	}
-	return pt;
+	
+	return count;
 }
 
-insere (ptlista, x) {
-	
+void insereNoFinal(tno** listaRef, string x) 
+{ 
+  tno* novoNo = new tno(); 
+  novoNo->chave = x; 
+  novoNo->prox = NULL; 
+  
+  tno* ultNo = *listaRef;
+  
+  if (*listaRef == NULL) { 
+      novoNo->ant = NULL; 
+      *listaRef = novoNo; 
+      return; 
+  } 
+  
+  while (ultNo->prox != NULL)
+  {
+    ultNo = ultNo->prox; 
+  } 
+  
+  ultNo->prox = novoNo; 
+  
+  novoNo->ant = ultNo; 
+}
+
+int main()
+{
+  tno * lista = NULL;
+
+  insereNoFinal(&lista, "jurubeba");
+  insereNoFinal(&lista, "guerigueri");
+  insereNoFinal(&lista, "guerigueri");
+  
+  cout << contaPalavra(lista, "234234234");
 }
