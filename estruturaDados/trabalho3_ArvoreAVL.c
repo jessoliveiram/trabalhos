@@ -10,44 +10,48 @@ struct arvore *esq;
 
 Arv *raiz;
 
-// Retorna o maior valor entre x e y
-
-int max(int x, int y) {
-if (x > y)
-return x;
-return y;
+int max(int x, int y) 
+{
+  if (x > y)
+  {
+    return x;
+  }
+  else
+  {
+    return y;
+  }
 }
-
-//Retorna a altura do nó
 
 int altura_No(Arv *arv) {
-if (arv == NULL) {
-return 0;
+  if (arv == NULL) 
+  {
+    return 0;
+  }
+  else
+  {
+    return arv->altura;
+  }
 }
-return arv->altura;
-};
-
-// Aplica a altura à todos os nós da árvore
 
 int aplicaALTURA(Arv* arv) {
 arv->altura = max(altura_No(arv->esq), altura_No(arv->dir)) + 1;
 return arv->altura;
 }
 
-//Retorna o fator de balanceamento do nó
-
 int fat_bal(Arv* arv) {
 return (altura_No(arv->esq) - altura_No(arv->dir));
 }
 
-Arv* rotacaoEsquerda(Arv *arv) {
+Arv* rotacaoEsquerda(Arv *arv) 
+{
 Arv *tmp = arv->dir;
 arv->dir = tmp->esq;
 tmp->esq = arv;
 return tmp;
 }
 
-Arv* rotacaoDireita(Arv *arv) {
+Arv* rotacaoDireita(Arv *arv) 
+{
 Arv *tmp = arv->esq;
 arv->esq = tmp->dir;
 tmp->dir = arv;
@@ -99,7 +103,8 @@ listar(arv->dir);
 }
 }
 
-int main() {
+int main() 
+{
   raiz = NULL;
   int valor;
   cin >> "\nInforme o valor: " >> valor;
